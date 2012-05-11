@@ -4,9 +4,8 @@ bottle for cython
 this repo will try to hold the latest stable version of [bottle](https://github.com/defnull/bottle)
 when required modifications will be made to allow cython compilation into byte code
 
-current version
----------------
-# 0.10.9 #
+current version 0.10.9
+----------------------
 
 to compile
 ----------
