@@ -2,22 +2,22 @@ bottle for cython
 =================
 
 this repo will try to hold the latest stable version of [bottle](https://github.com/defnull/bottle)
-when necessary this version will have small modifications to allow cython compilation into byte code
+when required modifications will be made to allow cython compilation into byte code
 
 current version
 ---------------
-0.10.9
+# 0.10.9 #
 
 to compile
 ----------
 1.  clone this repo `git clone git://github.com/hayate/bottle.git`
-2.  install cython i.e `pip install cython`
+2.  install cython i.e `sudo pip install cython`
 3.  cd into the cloned repo `cd bottle`
 4.  compile bottle `python setup.py build_ext --inplace`
 
 change log
 ----------
-### stable version 0.10.9 ###
+### of stable version 0.10.9 ###
 added initialization of `__file__` from around line 69
 ```python
 # when bottle is byte compile with cython, __file__ is not available
