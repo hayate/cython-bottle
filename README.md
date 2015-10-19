@@ -23,6 +23,21 @@ if not hasattr(sys.modules[__name__], '__file__'):
     __file__ = inspect.getfile(inspect.currentframe())
 ```
 
+added workaround to [cython bug #600](http://trac.cython.org/ticket/600) at MultiDict initialization
+
+from (around line 1817):
+```python
+    def __init__(self, *a, **k):
+        self.dict = dict((k, [v]) for (k, v) in dict(*a, **k).items())
+```
+
+to:
+```python
+    def __init__(self, *a, **k):
+        items = dict(*a, **k).items()
+        self.dict = dict((k, [v]) for (k, v) in items)
+```
+
 ----------
 ### version 0.10.9 (stable) ###
 added initialization of `__file__` from around line 69
